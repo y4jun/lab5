@@ -5,11 +5,19 @@ $(document).ready(function() {
 	initializePage();
 })
 
+
+
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$('.friend h3').click(changeName);
+}
+
+function changeName(e) {
+	e.preventDefault();
+	$(this).text(anagrammedName($(this).text()));
 }
 
 function anagrammedName(name) {
